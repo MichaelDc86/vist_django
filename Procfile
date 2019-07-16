@@ -1,1 +1,1 @@
-web: gunicorn visttracks.wsgi --log-file -
+web: gunicorn vist.wsgi --log-file -
