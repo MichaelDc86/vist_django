@@ -1,0 +1,49 @@
+{% extends 'vist_app/base.html' %}
+{% load static %}
+
+{% block container %}
+<!--{#{ request.resolver_match }#}-->
+<!--{#{ object_list }#}-->
+<!--{{ title }}-->
+
+<div class='menu'>
+    <a href="http://127.0.0.1:8000/admin/">admin</a>
+</div>
+
+<form class="form" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="submit" type="submit" value="Применить">
+</form>
+
+<div class="table">
+    <table border="1" width="100%" cellpadding="5">
+        <tr>
+            <th>Бортовой номер</th>
+            <th>Модель</th>
+            <th>Макс. грузоподъемность</th>
+            <th>Текущий вес</th>
+            <th>Перегруз, %</th>
+        </tr>
+        {% if object_list %}
+            {% for object in object_list %}
+                <tr>
+                    <td>{{ object.tail_number }}</td>
+                    <td>{{ object.track_model }}</td>
+                    <td>{{ object.max_load_capacity }}</td>
+                    <td>{{ object.current_weight }}</td>
+                    {% if object.overld >= 0 %}
+                        <td>{{ object.overld|floatformat:2 }}</td>
+                    {% else %}
+                        <td>0</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+</div>
+
+
+<!--<hr align="center" width=100% size="4" color=blue />-->
+
+{% endblock %}
