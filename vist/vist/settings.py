@@ -81,22 +81,21 @@ WSGI_APPLICATION = 'vist.wsgi.application'
 db_from_env = dj_database_url.config()
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vist',
-        'USER': 'vist',
-        'PASSWORD': '123',
-        # 'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'NAME': 'vist',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'USER': 'vist',
+#         'PASSWORD': '123',
+#         'HOST': 'localhost'
+#     }
+# }
 
 DATABASES['default'].update(db_from_env)
 
