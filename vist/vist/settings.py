@@ -27,8 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3o$-*_gh_)8$x)lc0cx#=@yczq@ltnpwf&u)l2@s1&&$1&86_h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
 LOGGING = {
     'version': 1,
@@ -73,7 +73,7 @@ LOGGING = {
 
 # ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['localhost']
-ALLOWED_HOSTS = ['visttracks.herokuapp.com']
+ALLOWED_HOSTS = ['https://visttracks.herokuapp.com']
 
 # Application definition
 
