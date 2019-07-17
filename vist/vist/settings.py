@@ -31,8 +31,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-django_heroku.settings(locals())
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -137,3 +135,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+django_heroku.settings(locals())
