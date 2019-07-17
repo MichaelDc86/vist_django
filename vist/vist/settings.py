@@ -29,24 +29,24 @@ SECRET_KEY = '3o$-*_gh_)8$x)lc0cx#=@yczq@ltnpwf&u)l2@s1&&$1&86_h'
 # DEBUG = True
 DEBUG = False
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console'],
-#             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['localhost']
 # ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
