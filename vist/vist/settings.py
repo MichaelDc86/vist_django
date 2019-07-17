@@ -63,17 +63,17 @@ LOGGING = {
     }
 }
 
-if socket.gethostname() != 'localhost':
-    DEBUG = False
-    ALLOWED_HOSTS = ['*']
-
-else:
-    DEBUG = True
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# if socket.gethostname() != 'localhost':
+#     DEBUG = False
+#     ALLOWED_HOSTS = ['*']
+#
+# else:
+#     DEBUG = True
+#     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['localhost']
-# ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['visttracks.herokuapp.com']
 
 # Application definition
 
