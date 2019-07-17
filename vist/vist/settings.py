@@ -73,7 +73,7 @@ LOGGING = {
 
 # ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['localhost']
-ALLOWED_HOSTS = ['https://visttracks.herokuapp.com']
+ALLOWED_HOSTS = ['visttracks.herokuapp.com', 'dashboard.heroku.com']
 
 # Application definition
 
